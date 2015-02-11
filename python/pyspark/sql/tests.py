@@ -223,7 +223,6 @@ class SQLTests(ReusedPySparkTestCase):
         self.assertEquals('a', df1.first().f1)
         self.assertEquals(100000000000000, df1.first().f2)
 
-        self.assertEquals(point, ExamplePoint(1.0, 2.0))
         self.assertEqual(_infer_type(1), IntegerType())
         self.assertEqual(_infer_type(2**10), IntegerType())
         self.assertEqual(_infer_type(2**20), IntegerType())
